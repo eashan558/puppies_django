@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <form action="" method="Post">
+            {% csrf_token %}
+            {{ form }}
+            <label for="">Name:</label><input type="text" name="pname"><br>
+            <label for="">Type:</label><input type="text" name="ptype"><br>
+            <label for="">Date Added: </label><input type="date" name="dateadded"><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

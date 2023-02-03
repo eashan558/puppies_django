@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href={% static "details/d1-style.css" %} >
+    </head>
+    <body>
+        <form action="submit/" method="Post">
+            {% csrf_token %}
+            {{ form }}
+            <label for="">Name: </label><input type="text" name="name"><br><br>
+            <label for="">Breed: </label><input type="text" name="breed" required><br><br>
+            <label for="">GENDER:</label><br>
+            <input type="radio" name="gender" value="MALE"><label for="">MALE</label><br>
+            <input type="radio" name="gender" value="FEMALE"><label for="">FEMALE</label><br>
+            <label for="">Enter the date of Appointment </label><input type="date" name="date" required><br>
+            <input type="submit" name="submit">
+
+        </form>
+    </body>
+</html>

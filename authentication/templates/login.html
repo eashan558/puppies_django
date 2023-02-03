@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href={% static "authentication/login-style.css" %} >
+    </head>
+    <body>
+        <h1>Login to your Account</h1><br><br>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}}
+            <label for="">Login Id:</label><br>
+            <input type="text" name="loginid" required><br><br>
+            <label for="">Password:</label><br>
+            <input type="password" name="password" required><br>{{alert}}<br>
+            <input type="submit" value="Login">   <button><a id="forgot" href="forgot/">Forgot Password</a></button>
+        </form>
+    </body>
+</html>
